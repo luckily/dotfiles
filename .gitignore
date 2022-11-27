@@ -1,2 +1,3 @@
 tmp
-homebrew
+.bin/*
+!.bin/dummy
