@@ -5,13 +5,13 @@ BREW_PATH=$(shell which brew)
 ZSH_PATH=$(shell which zsh)
 OH_MY_ZSH_PATH=$(HOME)/.oh-my-zsh
 
-.PHONY: install
+.PHONY: install debug bootstrap install-homebrew-packages install-zsh-plugins configure
+
 install: bootstrap \
 	install-homebrew-packages \
 	install-zsh-plugins \
 	configure
 
-.PHONY: debug
 debug:
 	@echo User: $(USER)
 	@echo HOME_PATH: $(HOME)
@@ -32,20 +32,18 @@ debug:
 		echo oh-my-zsh does not exists;\
 	fi;
 
-.PHONY: bootstrap
-init:
+bootstrap:
 	./scripts/bootstrap
 
-.PHONY: install-homebrew-packages
-install-homebrew-packages:
+install-homebrew-packages: bootstrap
 	./scripts/install-homebrew-packages
 
-.PHONY: install-zsh-plugins
-install-zsh-plugins:
+install-zsh-plugins: install-homebrew-packages
 	./scripts/install-zsh-plugins
 
-.PHONY: configure
-configure:
+configure: install-zsh-plugins
 	./scripts/configure
+
+
 
 
