@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-DOTFILES_DIR=$HOME/.dotfiles
-
+export DOTFILES_DIR=$HOME/.dotfiles
+echo DOTFILES_DIR=$DOTFILES_DIR
 
 # For temporary settings.
 echo PATH="$PATH:$DOTFILES_DIR/.bin" >> ~/.bash_profile
