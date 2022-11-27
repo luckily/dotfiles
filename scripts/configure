@@ -35,3 +35,4 @@ done
 exec zsh
 
 echo "👌 Carry on with git setup!"
+exit 0

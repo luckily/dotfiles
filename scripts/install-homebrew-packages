@@ -28,3 +28,6 @@ brew install --cask maccy
 
 brew install --cask 1password
 brew install --cask 1password-cli
+
+echo "install homebrew packages successful."
+exit 0

@@ -32,3 +32,5 @@ fi;
 # @see https://sdkman.io/install
 [[ -z $(command -v sdk) ]] && curl -s "https://get.sdkman.io" | bash
 
+echo "bootstrap successful."
+exit 0
