@@ -4,9 +4,11 @@ export PATH="$HOME/.dotfiles/.bin:$PATH"
 
 # Install homebrew without sudo
 # @see https://docs.brew.sh/Installation
-[[ -z $(command -v brew) ]] && mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
-chmod +x homebrew/bin/brew
-cp homebrew/bin/brew $HOME/.dotfiles/.bin/brew
+[[ -z $(command -v brew) ]] &&\ 
+    mkdir homebrew &&\ 
+    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew &&\ 
+    chmod +x homebrew/bin/brew &&\ 
+    cp homebrew/bin/brew $HOME/.dotfiles/.bin/brew
 
 
 # Install oh-my-zsh
