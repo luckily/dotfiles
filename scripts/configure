@@ -29,7 +29,7 @@ CODE_PATH=~/Library/Application\ Support/Code/User
 for name in settings.json keybindings.json; do
   target="$CODE_PATH/$name"
   backup $target
-  symlink $PWD/.vscode/$name $target
+  symlink $PWD/configs/.vscode/$name $target
 done
 
 exec zsh
