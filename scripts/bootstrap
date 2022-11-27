@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
 
+DOTFILES_DIR=$HOME/.dotfiles
+
+
 # For temporary settings.
-echo PATH="$PATH:$HOME/.dotfiles/.bin" >> ~/.bash_profile
+echo PATH="$PATH:$DOTFILES_DIR/.bin" >> ~/.bash_profile
 source ~/.bash_profile
 
 
 # Install homebrew without sudo.
 # @see https://docs.brew.sh/Installation
 [[ -z $(command -v brew) ]] &&\ 
-    mkdir -p $HOME/.installed/homebrew &&\ 
-    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $HOME/.installed/homebrew &&\ 
-    chmod +x $HOME/.installed/homebrew/brew &&\ 
-    ln -s homebrew/bin/brew $HOME/.dotfiles/.bin/brew
+    mkdir -p $DOTFILES_DIR/.installed/homebrew &&\ 
+    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $DOTFILES_DIR/.installed/homebrew &&\ 
+    chmod +x $DOTFILES_DIR/.installed/homebrew/bin/brew &&\ 
+    ln -s $DOTFILES_DIR/.installed/homebrew/bin/brew $HOME/.dotfiles/.bin/brew
 
 
 # If brew install failed then exit.
