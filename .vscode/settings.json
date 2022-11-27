@@ -1,0 +1,84 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "go.testOnSave": true,
+    "go.lintOnSave": "package",
+    "go.formatTool": "goimports",
+    "go.autocompleteUnimportedPackages": true,
+    "go.useLanguageServer": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "[javascript]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        },
+        "editor.quickSuggestionsDelay": 10,
+        "editor.suggestOnTriggerCharacters": true,
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.snippetSuggestions": "top"
+    },
+    "[typescript]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+    },
+    "cSpell.userWords": [
+        "Loadbalancer",
+        "Multithreading",
+        "Pseudocode",
+        "fargate",
+        "healthchecker"
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontSize": 18,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "protoc": {},
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "terminal.integrated.tabs.enabled": true,
+    "redhat.telemetry.enabled": true,
+    "cSpell.enableFiletypes": [
+        "dockerfile",
+        "editorconfig",
+        "elixir",
+        "go.sum",
+        "jupyter",
+        "makefile",
+        "proto3",
+        "shellscript",
+        "sql",
+        "vue",
+        "xml"
+    ],
+    "liveServer.settings.CustomBrowser": "chrome",
+    "open-in-browser.default": "Google Chrome",
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "cSpell.words": [
+        "dotfiles",
+        "ohmyzsh"
+    ]
+}

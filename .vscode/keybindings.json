@@ -1,0 +1,21 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+.",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    }
+]

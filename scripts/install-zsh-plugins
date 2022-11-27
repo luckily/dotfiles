@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Manage multiple runtime versions with a single CLI tool
+# @see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+
+# zsh-completions
+# @see https://github.com/zsh-users/zsh-completions#oh-my-zsh
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+
+# zsh-autosuggestions
+# @see https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# zsh-syntax-highlighting
+# @see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
