@@ -34,18 +34,18 @@ debug:
 
 .PHONY: bootstrap
 init:
-	./script/bootstrap
+	./scripts/bootstrap
 
 .PHONY: install-homebrew-packages
 install-homebrew-packages:
-	./script/install-homebrew-packages
+	./scripts/install-homebrew-packages
 
 .PHONY: install-zsh-plugins
 install-zsh-plugins:
-	./script/install-zsh-plugins
+	./scripts/install-zsh-plugins
 
 .PHONY: configure
 configure:
-	./script/configure
+	./scripts/configure
 
 
