@@ -4,7 +4,7 @@
 # @see https://docs.brew.sh/Installation
 [[ -z $(command -v brew) ]] && mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 chmod +x homebrew/bin/brew
-cp homebrew/bin/brew /usr/local/bin/
+cp homebrew/bin/brew /opt/brew
 
 
 # Install oh-my-zsh
