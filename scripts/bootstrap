@@ -2,12 +2,12 @@
 
 # Install homebrew
 # @see https://docs.brew.sh/Installation
-[[ -z $(command -v brew) ]] && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+[[ -z $(command -v brew) ]] && curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 
 
 # Install oh-my-zsh
 # @see https://ohmyz.sh/#install
-[[ ! -d $HOME/.oh-my-zsh ]] && curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
+[[ ! -d $HOME/.oh-my-zsh ]] && curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 
 
 # Install sdkman(java version management)
