@@ -34,8 +34,8 @@ for name in settings.json keybindings.json; do
   symlink "$PWD/configs/.vscode/$name" "$target"
 done
 
-exec zsh
-
 success "Configure successful."
 info "🚀 Carry on with git setup. 🚀"
+
+exec zsh
 exit 0
