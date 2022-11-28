@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source utils
+
 # Manage multiple runtime versions with a single CLI tool
 # @see https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
@@ -16,5 +18,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # @see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-echo "Install zsh-plugins successful."
+success "Install zsh-plugins successful."
 exit 0

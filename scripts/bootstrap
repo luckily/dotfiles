@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+source utils
+
 export DOTFILES_DIR=$HOME/.dotfiles
-echo DOTFILES_DIR=$DOTFILES_DIR
+info DOTFILES_DIR=$DOTFILES_DIR
+
 
 # For temporary settings.
-echo PATH="$PATH:$DOTFILES_DIR/.bin" >> ~/.bash_profile
+info PATH="$PATH:$DOTFILES_DIR/.bin" >> ~/.bash_profile
 source ~/.bash_profile
 
 
@@ -18,8 +21,7 @@ fi;
 
 # If brew install failed then exit.
 if [[ -z $(command -v brew) ]]; then
-    echo "homebrew install failed"
-    exit 1
+    fail "homebrew install failed"
 fi;
 
 
@@ -32,5 +34,5 @@ fi;
 # @see https://sdkman.io/install
 [[ -z $(command -v sdk) ]] && curl -s "https://get.sdkman.io" | bash
 
-echo "Bootstrap successful."
+success "Bootstrap successful."
 exit 0

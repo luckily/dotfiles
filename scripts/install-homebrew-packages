@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source utils
+
 brew install git
 brew install tree
 brew install jq
@@ -29,5 +31,5 @@ brew install --cask maccy
 brew install --cask 1password
 brew install --cask 1password-cli
 
-echo "Install homebrew packages successful."
+success "Install homebrew packages successful."
 exit 0
