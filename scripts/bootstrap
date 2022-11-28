@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-source utils
+source $PWD/scripts/utils
 
 export DOTFILES_DIR=$HOME/.dotfiles
 info DOTFILES_DIR=$DOTFILES_DIR
-
 
 # For temporary settings.
 info PATH="$PATH:$DOTFILES_DIR/.bin" >> ~/.bash_profile
