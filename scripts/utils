@@ -5,7 +5,7 @@ info () {
 }
 
 success () {
-  printf "\r\033[2K  [ \033[00;SUCCESS\033[0m ] $1\n"
+  printf "\r\033[2K  [ \033[00;32mSUCCESS\033[0m ] $1\n"
 }
 
 fail () {
