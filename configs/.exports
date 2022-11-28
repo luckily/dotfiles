@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# export PATH=$HOME/bin:$HOME/.dotfiles/.bin:/usr/local/bin:$PATH
+
+# DOTFILES_PATH
+
+# HOMEBREW_PREFIX
+    # default: /opt/homebrew
+    # want: $DOTFILES_PATH/.homebrew
+
+# HOMEBREW_CELLAR:
+    # default: /opt/homebrew/Cellar
+    # want: $HOMEBREW_PREFIX/Cellar
+
+# let .zshrc and each scripts to source this .export
