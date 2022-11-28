@@ -44,6 +44,5 @@ install-zsh-plugins: install-homebrew-packages
 configure: install-zsh-plugins
 	./scripts/configure
 
-
 reconfigure:
 	./scripts/configure
