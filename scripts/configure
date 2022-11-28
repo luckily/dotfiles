@@ -35,7 +35,7 @@ for name in settings.json keybindings.json; do
 done
 
 success "Configure successful."
-info "🚀 Carry on with git setup. 🚀"
+success "🚀 Carry on with git setup. 🚀"
 
 exec zsh
 exit 0
