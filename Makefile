@@ -5,7 +5,7 @@ BREW_PATH=$(shell which brew)
 ZSH_PATH=$(shell which zsh)
 OH_MY_ZSH_PATH=$(HOME)/.oh-my-zsh
 
-.PHONY: install debug bootstrap install-homebrew-packages install-zsh-plugins configure
+.PHONY: install debug bootstrap install-homebrew-packages install-zsh-plugins configure reconfigure
 
 install: bootstrap \
 	install-homebrew-packages \
@@ -45,5 +45,5 @@ configure: install-zsh-plugins
 	./scripts/configure
 
 
-
-
+reconfigure:
+	./scripts/configure

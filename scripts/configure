@@ -15,24 +15,25 @@ symlink() {
   local file=$1
   local target=$2
   if [[ ! -f "$target" && ! -L "$target" ]]; then
-    echo "-----> Symlinking your new $target"
+    echo "Symlinking your new $target"
     ln -s $file $target
   fi
 }
 
-echo "-----> Start to link .zshrc"
+echo "Start to link .zshrc"
 backup $HOME/.zshrc
 symlink $PWD/configs/.zshrc $HOME/.zshrc
 
-echo "-----> Start to link vscode settings & keybindings"
+echo "Start to link vscode settings & keybindings"
 CODE_PATH=~/Library/Application\ Support/Code/User
 for name in settings.json keybindings.json; do
   target="$CODE_PATH/$name"
-  backup $target
-  symlink $PWD/configs/.vscode/$name $target
+  backup "$target"
+  symlink $PWD/configs/.vscode/$name "$target"
 done
 
 exec zsh
 
-echo "👌 Carry on with git setup!"
+echo "Configure successful."
+echo "🚀 Carry on with git setup. 🚀"
 exit 0
