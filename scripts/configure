@@ -5,7 +5,7 @@ source $PWD/scripts/utils
 backup() {
   local target=$1
   if [[ -e "$target" ]]; then
-    if [[ ! -L "$target" ]]; then
+    if [[ -f "$target" || -L "$target" ]]; then
       local extension="backup.$(date +%Y%m%d%H%M%S)"
       mv "$target" "$target.$extension"
       info "Moved your old $target config file to $target.$extension"
