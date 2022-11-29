@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
+# Initial settings
+source $HOME/.dotfiles/configs/.bash_profile
+
+
 # For some manually install tools need to install in `.bin` folder.
 mkdir $HOME/.dotfiles/.bin
 
-# Initial settings
 info "Start to Symlink .bash_profile"
 ln -sf $HOME/.dotfiles/configs/.bash_profile $HOME/.bash_profile
-source $HOME/.dotfiles/configs/.bash_profile
 
 
 # Install homebrew without sudo.
