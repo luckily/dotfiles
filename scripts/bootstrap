@@ -17,6 +17,8 @@ if [[ -z $(command -v brew) ]]; then
     chmod +x $DOTFILES_DIR/.homebrew/bin/brew
 fi;
 
+source $HOME/.dotfiles/configs/.bash_profile
+
 # If brew install failed then exit.
 if [[ $? != 0 ]]; then
     fail "homebrew install failed"
