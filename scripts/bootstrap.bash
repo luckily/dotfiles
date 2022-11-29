@@ -41,7 +41,7 @@ if [ $? != 0 ];then
     fail "zsh failed."
 fi
 
-source $DOTFILES_PATH/configs/.zshrc
+exec zsh
 
 # Install oh-my-zsh.
 # @see https://ohmyz.sh/#install
