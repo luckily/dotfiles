@@ -1,8 +1,8 @@
 # Source the environment variables
 # @see https://stackoverflow.com/a/26020688
 # @see http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
-# source $HOME/.dotfiles/configs/.exports
-# source $HOME/.dotfiles/configs/.functions
+source $HOME/.dotfiles/configs/.exports
+source $HOME/.dotfiles/configs/.functions
 
 success "🔱 Load `zsh` successful. 🔱"
 
@@ -19,35 +19,35 @@ success "🔱 Load `zsh` successful. 🔱"
 ZSH_THEME="robbyrussell"
 
 #Show Time on prompt
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_NODE_SHOW=true
-SPACESHIP_GOLANG_SHOW=true
-SPACESHIP_PYTHON_SHOW=true
-SPACESHIP_DOCKER_SHOW=false
-SPACESHIP_AWS_SHOW=true
-SPACESHIP_TERRAFORM_SHOW=true
-SPACESHIP_EXIT_CODE_SHOW=true
-SPACESHIP_KUBECTL_SHOW=true
-SPACESHIP_KUBECTL_VERSION_SHOW=false
-SPACESHIP_KUBECTL_CONTEXT_SHOW=true
-SPACESHIP_PROMPT_ORDER=(
-  time          # Time stamps section
-  dir           # Current directory section
-  git           # Git section (git_branch + git_status)
-  package       # Package version
-  user          # Username section
-  host          # Hostname section
-  node          # Node.js section
-  docker        # Docker section
-  aws           # Amazon Web Services section
-  kubectl       # Kubectl context section
-  terraform     # Terraform workspace section
-  exec_time     # Execution time
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
+# SPACESHIP_TIME_SHOW=true
+# SPACESHIP_NODE_SHOW=true
+# SPACESHIP_GOLANG_SHOW=true
+# SPACESHIP_PYTHON_SHOW=true
+# SPACESHIP_DOCKER_SHOW=false
+# SPACESHIP_AWS_SHOW=true
+# SPACESHIP_TERRAFORM_SHOW=true
+# SPACESHIP_EXIT_CODE_SHOW=true
+# SPACESHIP_KUBECTL_SHOW=true
+# SPACESHIP_KUBECTL_VERSION_SHOW=false
+# SPACESHIP_KUBECTL_CONTEXT_SHOW=true
+# SPACESHIP_PROMPT_ORDER=(
+#   time          # Time stamps section
+#   dir           # Current directory section
+#   git           # Git section (git_branch + git_status)
+#   package       # Package version
+#   user          # Username section
+#   host          # Hostname section
+#   node          # Node.js section
+#   docker        # Docker section
+#   aws           # Amazon Web Services section
+#   kubectl       # Kubectl context section
+#   terraform     # Terraform workspace section
+#   exec_time     # Execution time
+#   line_sep      # Line break
+#   jobs          # Background jobs indicator
+#   exit_code     # Exit code section
+#   char          # Prompt character
+# )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -105,9 +105,9 @@ plugins=(git docker docker-compose kubectl kops minikube helm aws zsh-completion
 
 # zsh-completions
 # @see https://github.com/zsh-users/zsh-completions#oh-my-zsh
-# fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -121,9 +121,9 @@ plugins=(git docker docker-compose kubectl kops minikube helm aws zsh-completion
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# # The multiple runtime version management
-# [[ -e $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh ]] && source $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh
+# The multiple runtime version management
+[[ -e $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh ]] && source $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh
 
-# # The java version management
-# [[ -e $HOME/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.sdkman/bin/sdkman-init.sh
+# The java version management
+[[ -e $HOME/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.sdkman/bin/sdkman-init.sh
 
