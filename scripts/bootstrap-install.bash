@@ -7,8 +7,9 @@ source $HOME/.dotfiles/configs/.bash_profile
 # For some manually install tools need to install in `.bin` folder.
 mkdir $HOME/.dotfiles/.bin
 
-info "Start to Symlink .bash_profile"
+info "Start to Symlink .bash_profile and .zshrc"
 ln -sf $HOME/.dotfiles/configs/.bash_profile $HOME/.bash_profile
+ln -sf $HOME/.dotfiles/configs/.zshrc $HOME/.zshrc
 
 
 # Install homebrew without sudo.
