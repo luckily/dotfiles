@@ -1,6 +1,6 @@
-.PHONY: install debug bootstrap-install bootstrap-plugins install-homebrew-formulas configure reconfigure patch-install cleanup
+.PHONY: install debug bootstrap-basic bootstrap-plugins install-homebrew-formulas configure reconfigure patch-install cleanup
 
-install: bootstrap-install \
+install: bootstrap-basic \
 	bootstrap-plugins \
 	install-homebrew-formulas \
 	configure
@@ -10,8 +10,8 @@ debug:
 	@echo "-----"
 	./scripts/debug.zsh
 
-bootstrap-install:
-	./scripts/bootstrap-install.bash
+bootstrap-basic:
+	./scripts/bootstrap-basic.bash
 
 bootstrap-plugins:
 	./scripts/bootstrap-plugins.zsh
