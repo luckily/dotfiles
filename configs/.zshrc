@@ -1,8 +1,8 @@
 # Source the environment variables
 # @see https://stackoverflow.com/a/26020688
 # @see http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
-[[ -e $HOME/.dotfiles/configs/.exports ]] && source "$HOME/.dotfiles/configs/.exports"
-[[ -e $HOME/.dotfiles/configs/.functions ]] && source "$HOME/.dotfiles/configs/.functions"
+[[ -e $HOME/.dotfiles/configs/.exports ]] && emulate sh -c "$HOME/.dotfiles/configs/.exports"
+[[ -e $HOME/.dotfiles/configs/.functions ]] && emulate sh -c "$HOME/.dotfiles/configs/.functions"
 
 success "🔱 Load `zsh` successful. 🔱"
 
