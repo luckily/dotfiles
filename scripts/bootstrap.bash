@@ -36,11 +36,12 @@ fi
 
 
 # Start to use zsh
-exec zsh
+command -v zsh > /dev/null 2>&1 # Check if brew not working
 if [ $? != 0 ];then
     fail "zsh failed."
 fi
 
+source $DOTFILES_PATH/configs/.zshrc
 
 # Install oh-my-zsh.
 # @see https://ohmyz.sh/#install
