@@ -1,4 +1,6 @@
 #!/usr/bin/env zsh
+[[ -e $HOME/.dotfiles/configs/.exports ]] && emulate sh -c "$HOME/.dotfiles/configs/.exports"
+[[ -e $HOME/.dotfiles/configs/.functions ]] && emulate sh -c "$HOME/.dotfiles/configs/.functions"
 
 # Install oh-my-zsh.
 # @see https://ohmyz.sh/#install
