@@ -1,6 +1,5 @@
 SHELL=/bin/bash
 
-USER=$(shell whoami | grep '^joel' -o)
 BREW_PATH=$(shell which brew)
 ZSH_PATH=$(shell which zsh)
 OH_MY_ZSH_PATH=$(HOME)/.oh-my-zsh
@@ -13,7 +12,6 @@ install: bootstrap \
 	configure
 
 debug:
-	@echo User: $(USER)
 	@echo HOME_PATH: $(HOME)
 	@echo BREW_PATH: $(BREW_PATH)
 	@echo ZSH_PATH: $(ZSH_PATH)
