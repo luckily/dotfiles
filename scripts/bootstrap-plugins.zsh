@@ -1,8 +1,10 @@
 #!/usr/bin/env zsh
 
 # Initial settings
-source $HOME/.dotfiles/configs/.exports
-source $HOME/.dotfiles/configs/.functions
+source $HOME/.dotfiles/configs/.zshrc
+# source $HOME/.dotfiles/configs/.exports
+# source $HOME/.dotfiles/configs/.functions
+
 
 # Install oh-my-zsh.
 # @see https://ohmyz.sh/#install
