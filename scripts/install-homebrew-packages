@@ -10,9 +10,6 @@ brew install tldr
 brew install ipcalc
 brew install ffmpeg
 
-# The default AWS CLI
-brew install awscli@1
-
 # @see https://github.com/ggreer/the_silver_searcher ag
 brew install the_silver_searcher
 
