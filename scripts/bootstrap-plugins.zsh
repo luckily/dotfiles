@@ -37,7 +37,6 @@ success "Install zsh-plugins successful."
 [[ -z $(command -v asdf) ]] && \
     info "Start to install asdf." && \
     brew install asdf && \
-    echo "source $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf/sh" >> "$HOME/.dotfiles/configs/.zshrc" && \
     success "Install asdf successful."
 
 
@@ -46,7 +45,6 @@ success "Install zsh-plugins successful."
 [[ -z $(command -v sdk) ]] && \
     info "Start to install sdkman." && \
     curl -s "https://get.sdkman.io" | zsh && \
-    echo "source $HOME/.sdkman/bin/sdkman-init.sh" >> "$HOME/.dotfiles/configs/.zshrc" && \
     success "Install sdkman successful."
 
 # Relink .zshrc

@@ -121,4 +121,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# The multiple runtime version management
+[[ -e $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh ]] && source $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh
+
+# The java version management
+[[ -e source $HOME/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.sdkman/bin/sdkman-init.sh
 
