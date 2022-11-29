@@ -11,7 +11,8 @@ source $HOME/.dotfiles/configs/.bash_profile
 
 # Install homebrew without sudo.
 # @see https://docs.brew.sh/Installation
-if [[ -z $(command -v brew) ]]; then
+command -v brew > /dev/null 2>&1 # Check if brew not working
+if [ $? != 0 ]; then
     info "Start to install Homebrew"
 
     mkdir -p $DOTFILES_DIR/.homebrew && \ 
