@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
+
+# Initial settings
 source $HOME/.dotfiles/configs/.exports
 source $HOME/.dotfiles/configs/.functions
-# source $HOME/.dotfiles/configs/.zshrc
 
 # Install oh-my-zsh.
 # @see https://ohmyz.sh/#install
@@ -47,6 +48,9 @@ success "Install zsh-plugins successful."
     curl -s "https://get.sdkman.io" | zsh && \
     echo "source $HOME/.sdkman/bin/sdkman-init.sh" >> "$HOME/.dotfiles/configs/.zshrc" && \
     success "Install sdkman successful."
+
+# Relink .zshrc
+ln -sf $HOME/.dotfiles/configs/.zshrc $HOME/.zshrc
 
 exec zsh
 

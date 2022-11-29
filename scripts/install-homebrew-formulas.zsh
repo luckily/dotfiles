@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-source $HOME/.dotfiles/configs/.zshrc
+# Initial settings
+source $HOME/.dotfiles/configs/.exports
+source $HOME/.dotfiles/configs/.functions
 
 brew install git
 brew install tree

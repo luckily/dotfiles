@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-source $HOME/.dotfiles/configs/.zshrc
+# Initial settings
+source $HOME/.dotfiles/configs/.exports
+source $HOME/.dotfiles/configs/.functions
 
 info "Start to link .zshrc"
 backup $HOME/.zshrc
