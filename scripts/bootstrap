@@ -12,17 +12,17 @@ source $HOME/.dotfiles/configs/.bash_profile
 # Install homebrew without sudo.
 # @see https://docs.brew.sh/Installation
 command -v brew > /dev/null 2>&1 # Check if brew not working
-if [ $? != 0 ]; then
+if [ $? != 0 ];then
     info "Start to install Homebrew"
 
-    mkdir -p $DOTFILES_DIR/.homebrew && \ 
-    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $DOTFILES_DIR/.homebrew && \ 
+    mkdir -p $DOTFILES_DIR/.homebrew && \
+    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C $DOTFILES_DIR/.homebrew && \
     chmod +x $DOTFILES_DIR/.homebrew/bin/brew
-fi;
+fi
 
-if [[ $? != 0 ]]; then
+if [[ $? != 0 ]];then
     fail "Homebrew install failed"
-fi;
+fi
 
 
 # Install oh-my-zsh.
