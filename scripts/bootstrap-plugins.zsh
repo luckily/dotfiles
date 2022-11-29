@@ -1,9 +1,7 @@
 #!/usr/bin/env zsh
-# [[ -e $HOME/.dotfiles/configs/.exports ]] && emulate sh -c "$HOME/.dotfiles/configs/.exports"
-# [[ -e $HOME/.dotfiles/configs/.functions ]] && emulate sh -c "$HOME/.dotfiles/configs/.functions"
-# source $HOME/.dotfiles/configs/.exports
-# source $HOME/.dotfiles/configs/.functions
-source $HOME/.dotfiles/configs/.zshrc
+source $HOME/.dotfiles/configs/.exports
+source $HOME/.dotfiles/configs/.functions
+# source $HOME/.dotfiles/configs/.zshrc
 
 # Install oh-my-zsh.
 # @see https://ohmyz.sh/#install
@@ -50,7 +48,7 @@ success "Install zsh-plugins successful."
     echo "source $HOME/.sdkman/bin/sdkman-init.sh" >> "$HOME/.dotfiles/configs/.zshrc" && \
     success "Install sdkman successful."
 
-source $HOME/.dotfiles/configs/.zshrc
+exec zsh
 
 success "Bootstrap plugins successful."
 exit 0
