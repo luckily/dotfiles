@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source $HOME/.dotfiles/configs/.bash_profile
 source $PWD/scripts/utils
 
 # Manage multiple runtime versions with a single CLI tool
