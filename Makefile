@@ -29,4 +29,4 @@ patch-install:
 	./scripts/patch/install-aws-tools.zsh
 
 cleanup:
-	rm -rf ../.sdkman ../.oh-my-zsh ../.zshrc ../.bash_profile .bin .homebrew
+	rm -rf ../.sdkman ../.oh-my-zsh ../.zshrc.pre-oh-my-zsh ../.zshrc ../.bash_profile .bin .homebrew
