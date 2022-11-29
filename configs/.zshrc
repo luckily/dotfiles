@@ -1,8 +1,8 @@
 # Source the environment variables
 # @see https://stackoverflow.com/a/26020688
 # @see http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
-source $HOME/.dotfiles/configs/.exports
-source $HOME/.dotfiles/configs/.functions
+# source $HOME/.dotfiles/configs/.exports
+# source $HOME/.dotfiles/configs/.functions
 
 success "🔱 Load `zsh` successful. 🔱"
 
