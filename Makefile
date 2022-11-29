@@ -1,49 +1,34 @@
-SHELL=/bin/bash
-
-BREW_PATH=$(shell which brew)
-ZSH_PATH=$(shell which zsh)
-OH_MY_ZSH_PATH=$(HOME)/.oh-my-zsh
-
-.PHONY: install debug bootstrap install-homebrew-packages install-zsh-plugins configure reconfigure patch-install
+.PHONY: install debug bootstrap install-homebrew-formulas configure reconfigure patch-install
 
 install: bootstrap \
-	install-homebrew-packages \
-	install-zsh-plugins \
+	install-homebrew-formulas \
 	configure
 
 debug:
-	@echo HOME_PATH: $(HOME)
-	@echo BREW_PATH: $(BREW_PATH)
-	@echo ZSH_PATH: $(ZSH_PATH)
-	@echo OH_MY_ZSH_PATH: $(OH_MY_ZSH_PATH)
+	SHELL=/bin/bash
+	./scripts/debug.bash
 
-	@printf "\n"
+	@echo "-----"
 
-	@if [[ -z "$(BREW_PATH)" ]]; then\
-		echo No brew in this machine.;\
-	else\
-		echo The brew is in this path $(BREW_PATH);\
-	fi;
-	@if [[ -d $(OH_MY_ZSH_PATH) ]]; then\
-		echo oh-my-zsh exists;\
-	else\
-		echo oh-my-zsh does not exists;\
-	fi;
+	SHELL=/bin/zsh
+	./scripts/debug.zsh
+
 
 bootstrap:
-	./scripts/bootstrap
+	SHELL=/bin/bash
+	./scripts/bootstrap.bash
 
-install-homebrew-packages: bootstrap
-	./scripts/install-homebrew-packages
+install-homebrew-formulas: bootstrap
+	SHELL=/bin/zsh
+	./scripts/install-homebrew-formulas.zsh
 
-install-zsh-plugins: install-homebrew-packages
-	./scripts/install-zsh-plugins
-
-configure: install-zsh-plugins
-	./scripts/configure
+configure: install-homebrew-formulas
+	SHELL=/bin/zsh
+	./scripts/configure.zsh
 
 reconfigure:
-	./scripts/configure
+	./scripts/configure.zsh
 
 patch-install:
-	./scripts/patch/install-aws-tools
+	SHELL=/bin/zsh
+	./scripts/patch/install-aws-tools.zsh
