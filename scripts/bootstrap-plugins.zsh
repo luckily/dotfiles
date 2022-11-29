@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-source $HOME/.dotfiles/configs/.zshrc
-
 # Install oh-my-zsh.
 # @see https://ohmyz.sh/#install
 [[ ! -d $HOME/.oh-my-zsh ]] && \
