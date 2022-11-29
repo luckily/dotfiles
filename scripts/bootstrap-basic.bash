@@ -8,8 +8,13 @@ source $HOME/.dotfiles/configs/.bash_profile
 mkdir $HOME/.dotfiles/.bin
 
 info "Start to Symlink .bash_profile and .zshrc"
-ln -sf $HOME/.dotfiles/configs/.bash_profile $HOME/.bash_profile
-ln -sf $HOME/.dotfiles/configs/.zshrc $HOME/.zshrc
+backup $HOME/.bash_profile
+backup $HOME/.zshrc
+symlink $HOME/.dotfiles/configs/.bash_profile $HOME/.bash_profile
+symlink $HOME/.dotfiles/configs/.zshrc $HOME/.zshrc
+
+# ln -sf $HOME/.dotfiles/configs/.bash_profile $HOME/.bash_profile
+# ln -sf $HOME/.dotfiles/configs/.zshrc $HOME/.zshrc
 
 
 # Install homebrew without sudo.
