@@ -1,6 +1,3 @@
 tmp
-.bin/*
-!.bin/.keep
-!.bin/dummy
-.installed/*
-!.installed/.keep
+.bin
+.homebrew
