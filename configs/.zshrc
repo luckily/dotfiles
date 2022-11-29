@@ -1,20 +1,50 @@
+# Source the environment variables
+# @see https://stackoverflow.com/a/26020688
+# @see http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
+[[ -e ~/.profile ]] && emulate sh -c "source $HOME/.dotfiles/.exports"
+
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.dotfiles/.bin:/usr/local/bin:$PATH
+# export PATH=$HOME/.dotfiles/.homebrew/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+#Show Time on prompt
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_NODE_SHOW=true
+SPACESHIP_GOLANG_SHOW=true
+SPACESHIP_PYTHON_SHOW=true
+SPACESHIP_DOCKER_SHOW=false
+SPACESHIP_AWS_SHOW=true
+SPACESHIP_TERRAFORM_SHOW=true
+SPACESHIP_EXIT_CODE_SHOW=true
+SPACESHIP_KUBECTL_SHOW=true
+SPACESHIP_KUBECTL_VERSION_SHOW=false
+SPACESHIP_KUBECTL_CONTEXT_SHOW=true
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stamps section
+  dir           # Current directory section
+  git           # Git section (git_branch + git_status)
+  package       # Package version
+  user          # Username section
+  host          # Hostname section
+  node          # Node.js section
+  docker        # Docker section
+  aws           # Amazon Web Services section
+  kubectl       # Kubectl context section
+  terraform     # Terraform workspace section
+  exec_time     # Execution time
+  line_sep      # Line break
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -77,7 +107,6 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -106,8 +135,10 @@ source $ZSH/oh-my-zsh.sh
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
-# java version manager(sdkman)
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# Java version manager(sdkman)
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
 

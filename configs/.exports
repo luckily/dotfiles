@@ -1,15 +1,16 @@
-#!/usr/bin/env bash
+# This file is shared between bash and zsh
+# The example @see https://github.com/paulirish/dotfiles/blob/main/.exports#L1
+# The solution @see https://stackoverflow.com/a/26020688
 
-# export PATH=$HOME/bin:$HOME/.dotfiles/.bin:/usr/local/bin:$PATH
+export PATH=$HOME/.dotfiles/.homebrew/bin:$HOME/bin:/usr/local/bin:$PATH
+export DOTFILES_PATH=$HOME/.dotfiles
+export ZSH=$HOME/.oh-my-zsh
 
-# DOTFILES_PATH
 
-# HOMEBREW_PREFIX
-    # default: /opt/homebrew
-    # want: $DOTFILES_PATH/.homebrew
+# The Homebrew path
+# default is: /opt/homebrew
+export HOMEBREW_PREFIX=$DOTFILES_PATH/.homebrew
 
-# HOMEBREW_CELLAR:
-    # default: /opt/homebrew/Cellar
-    # want: $HOMEBREW_PREFIX/Cellar
+# default: /opt/homebrew/Cellar
+export HOMEBREW_CELLAR=$HOMEBREW_PREFIX/Cellar
 
-# let .zshrc and each scripts to source this .export
