@@ -105,7 +105,7 @@ plugins=(git docker docker-compose kubectl kops minikube helm aws zsh-completion
 
 # zsh-completions
 # @see https://github.com/zsh-users/zsh-completions#oh-my-zsh
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+# fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
