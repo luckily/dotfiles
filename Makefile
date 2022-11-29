@@ -1,4 +1,4 @@
-.PHONY: install debug bootstrap-install bootstrap-plugins install-homebrew-formulas configure reconfigure patch-install
+.PHONY: install debug bootstrap-install bootstrap-plugins install-homebrew-formulas configure reconfigure patch-install cleanup
 
 install: bootstrap-install \
 	bootstrap-plugins \
@@ -27,3 +27,6 @@ reconfigure:
 
 patch-install:
 	./scripts/patch/install-aws-tools.zsh
+
+cleanup:
+	rm -rf ../.sdkman ../.oh-my-zsh ../.zshrc ../.bash_profile .bin .homebrew
