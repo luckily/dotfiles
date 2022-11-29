@@ -1,8 +1,8 @@
 # Source the environment variables
 # @see https://stackoverflow.com/a/26020688
 # @see http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
-# source $HOME/.dotfiles/configs/.exports
-# source $HOME/.dotfiles/configs/.functions
+source $HOME/.dotfiles/configs/.exports
+source $HOME/.dotfiles/configs/.functions
 
 success "🔱 Load `zsh` successful. 🔱"
 
@@ -105,7 +105,7 @@ plugins=(git docker docker-compose kubectl kops minikube helm aws zsh-completion
 
 # zsh-completions
 # @see https://github.com/zsh-users/zsh-completions#oh-my-zsh
-# fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,9 +121,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# The multiple runtime version management
-[[ -e $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh ]] && source $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh
+# # The multiple runtime version management
+# [[ -e $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh ]] && source $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh
 
-# The java version management
-[[ -e $HOME/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.sdkman/bin/sdkman-init.sh
+# # The java version management
+# [[ -e $HOME/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.sdkman/bin/sdkman-init.sh
 
