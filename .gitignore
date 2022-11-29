@@ -1,5 +1,6 @@
 tmp
 .bin/*
+!.bin/.keep
 !.bin/dummy
 .installed/*
 !.installed/.keep
