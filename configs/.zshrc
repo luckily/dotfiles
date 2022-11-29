@@ -107,7 +107,7 @@ ZSH_THEME="robbyrussell"
 # @see https://github.com/zsh-users/zsh-completions#oh-my-zsh
 # fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
