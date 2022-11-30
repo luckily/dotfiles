@@ -33,6 +33,8 @@ brew install --cask alfred
 brew install --cask shottr
 brew install --cask maccy
 brew install --cask 1password
+brew install --cask notion
+brew install --cask google-chrome
 
 
 # brew install ffmpeg
