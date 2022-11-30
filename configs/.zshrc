@@ -110,8 +110,9 @@ plugins=(git docker docker-compose kubectl kops minikube helm aws zsh-completion
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 [[ -e $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 
-# Compilation flags
+# Compilation flags. x86_64 for intel and arm64 for apple m1, m2
 # export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch arm64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -122,9 +123,18 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
 # The multiple runtime version management
 [[ -e $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh ]] && source $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh
 
+
 # The java version management
 [[ -e $HOME/.dotfiles/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.dotfiles/.sdkman/bin/sdkman-init.sh
+
+
+# Additional settings
+[[ -e $HOME/.dotfiles/configs/.workrc ]] && source $HOME/.dotfiles/configs/.workrc
+
+
+
 
