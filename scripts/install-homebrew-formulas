@@ -3,6 +3,8 @@
 # Initial settings
 source $HOME/.dotfiles/configs/.zshrc
 
+# Install some dependencies
+brew install openssl readline sqlite3 xz zlib tcl-tk
 
 brew install git
 brew install tree
