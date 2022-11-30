@@ -19,7 +19,7 @@ success '🔱 Load [zsh] successful. 🔱'
 # ZSH_THEME="robbyrussell"
 
 
-# The Spaceship theme and prompt's setting
+# The Spaceship theme and prompt's settings
 ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_NODE_SHOW=true

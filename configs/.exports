@@ -4,6 +4,7 @@
 export PATH=$HOME/.dotfiles/.homebrew/bin:$HOME/.dotfiles/.bin:$HOME/bin:/usr/local/bin:$PATH
 export DOTFILES_PATH=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
+export ZSH_CUSTOM=$ZSH/custom
 
 
 # The Homebrew path
