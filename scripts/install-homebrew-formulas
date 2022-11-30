@@ -11,13 +11,18 @@ brew install yq
 brew install tldr
 brew install ipcalc
 
+
 # @see https://github.com/ggreer/the_silver_searcher ag
 brew install the_silver_searcher
+
 
 # @see https://graphviz.org/doc/info/command.html
 brew install svn
 brew install graphviz
+brew install redis
 
+
+brew install --cask github
 brew install --cask slack
 brew install --cask iterm2
 brew install --cask docker

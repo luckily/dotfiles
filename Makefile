@@ -1,4 +1,4 @@
-.PHONY: install bootstrap-basic bootstrap-devtools install-homebrew-formulas configure reconfigure patch-install cleanup debug-zsh debug-bash
+.PHONY: install bootstrap-basic bootstrap-devtools install-homebrew-formulas configure reconfigure cleanup debug-zsh debug-bash
 
 install: bootstrap-basic \
 	bootstrap-devtools \
@@ -26,12 +26,9 @@ reconfigure:
 	./scripts/configure
 
 
-patch-install:
-	./scripts/patch/install-aws-tools
-
-
 cleanup:
 	rm -rf ../.sdkman ../.oh-my-zsh ../.zshrc.pre-oh-my-zsh ../.zshrc ../.bash_profile .bin .homebrew .sdkman
+	find $HOME -iname '.bash_profile.backup*' -or -iname '.zshrc.backup*' -maxdepth 1 | xargs rm
 
 
 debug-zsh: SHELL:=/bin/zsh

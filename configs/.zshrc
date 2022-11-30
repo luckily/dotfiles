@@ -16,9 +16,11 @@ success '🔱 Load [zsh] successful. 🔱'
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
-#Show Time on prompt
+
+# The Spaceship theme and prompt's setting
+ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_NODE_SHOW=true
 SPACESHIP_GOLANG_SHOW=true
@@ -28,7 +30,7 @@ SPACESHIP_AWS_SHOW=true
 SPACESHIP_TERRAFORM_SHOW=true
 SPACESHIP_EXIT_CODE_SHOW=true
 SPACESHIP_KUBECTL_SHOW=true
-SPACESHIP_KUBECTL_VERSION_SHOW=false
+SPACESHIP_KUBECTL_VERSION_SHOW=true
 SPACESHIP_KUBECTL_CONTEXT_SHOW=true
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
@@ -106,7 +108,7 @@ plugins=(git docker docker-compose kubectl kops minikube helm aws zsh-completion
 # zsh-completions
 # @see https://github.com/zsh-users/zsh-completions#oh-my-zsh
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-source $ZSH/oh-my-zsh.sh
+[[ -e $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

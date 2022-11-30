@@ -28,7 +28,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # spaceship theme
 # @see https://spaceship-prompt.sh/getting-started/#installing
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+ln -sf "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 success "Install zsh-plugins successful."
 
 
@@ -48,12 +48,12 @@ success "Install zsh-plugins successful."
     success "Install sdkman successful."
 
 
-# Relink .zshrc
-ln -sf $HOME/.dotfiles/configs/.zshrc $HOME/.zshrc
-
-
 # Reload .zshrc
 source $HOME/.dotfiles/configs/.zshrc
+
+
+# Relink .zshrc
+ln -sf $HOME/.dotfiles/configs/.zshrc $HOME/.zshrc
 
 
 success "Bootstrap plugins successful."
