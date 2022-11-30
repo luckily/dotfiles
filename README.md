@@ -20,7 +20,8 @@ git clone https://github.com/luckily/dotfiles.git ~/.dotfiles
 
 ### Step 3: Install my dotfiles for the first time.
 ```sh
-make debug
+make debug-bash
+make debug-zsh
 
 make install
 ```
