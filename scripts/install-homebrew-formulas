@@ -40,6 +40,7 @@ brew install --cask google-chrome
 # brew install ffmpeg
 # brew install --cask aws-vpn-client
 # brew install --cask 1password-cli
+# brew install --cask virtualbox
 
 
 success "Install homebrew packages successful."
