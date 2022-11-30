@@ -17,3 +17,5 @@ export HOMEBREW_CELLAR=$HOMEBREW_PREFIX/Cellar
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
+# The sdkman(Java version management) environment variable
+export SDKMAN_DIR="$HOME/.dotfiles/.sdkman"

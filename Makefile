@@ -1,32 +1,49 @@
-.PHONY: install debug bootstrap-basic bootstrap-plugins install-homebrew-formulas configure reconfigure patch-install cleanup
+.PHONY: install bootstrap-basic bootstrap-devtools install-homebrew-formulas configure reconfigure patch-install cleanup debug-zsh debug-bash
 
 install: bootstrap-basic \
-	bootstrap-plugins \
+	bootstrap-devtools \
 	install-homebrew-formulas \
 	configure
 
-debug:
-	./scripts/debug.bash
-	@echo "-----"
-	./scripts/debug.zsh
 
 bootstrap-basic:
-	./scripts/bootstrap-basic.bash
+	./scripts/bootstrap-basic
 
-bootstrap-plugins:
-	./scripts/bootstrap-plugins.zsh
 
-install-homebrew-formulas: bootstrap-plugins
-	./scripts/install-homebrew-formulas.zsh
+bootstrap-devtools:
+	./scripts/bootstrap-devtools
+
+
+install-homebrew-formulas: bootstrap-devtools
+	./scripts/install-homebrew-formulas
+
 
 configure: install-homebrew-formulas
-	./scripts/configure.zsh
+	./scripts/configure
+
 
 reconfigure:
-	./scripts/configure.zsh
+	./scripts/configure
+
 
 patch-install:
-	./scripts/patch/install-aws-tools.zsh
+	./scripts/patch/install-aws-tools
+
 
 cleanup:
 	rm -rf ../.sdkman ../.oh-my-zsh ../.zshrc.pre-oh-my-zsh ../.zshrc ../.bash_profile .bin .homebrew
+
+
+debug-zsh: SHELL:=/bin/zsh
+debug-zsh:
+	source $$HOME/.dotfiles/configs/.zshrc
+	printenv
+
+
+debug-bash: SHELL:=/bin/bash
+debug-bash:
+	source $$HOME/.dotfiles/configs/.bash_profile
+	printenv
+
+
+

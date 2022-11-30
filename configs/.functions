@@ -27,6 +27,6 @@ symlink() {
   local target=$2
   if [[ ! -f "$target" && ! -L "$target" ]]; then
     info "Symlinking your new $target"
-    ln -s "$file" "$target"
+    ln -sf "$file" "$target"
   fi
 }
