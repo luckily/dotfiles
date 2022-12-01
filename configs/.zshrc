@@ -17,10 +17,16 @@ success '🔱 Load [zsh] successful. 🔱'
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
+# ZSH_THEME="spaceship"
+# Support Warp terminal
+if [[ $TERM_PROGRAM != "WarpTerminal" ]];then
+   ZSH_THEME="spaceship"
+else
+   ZSH_THEME="robbyrussell"
+fi
 
 
 # The Spaceship theme and prompt's settings
-ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_NODE_SHOW=true
 SPACESHIP_GOLANG_SHOW=true

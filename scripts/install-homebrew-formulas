@@ -4,14 +4,8 @@
 source $HOME/.dotfiles/configs/.zshrc
 
 # Install some dependencies
-brew install openssl readline sqlite3 xz zlib tcl-tk
-
-brew install git
-brew install tree
-brew install jq
-brew install yq
-brew install tldr
-brew install ipcalc
+brew install gcc openssl readline xz zlib tcl-tk
+brew install git git wget curl tree jq yq tldr ipcalc redis sqlite3
 
 
 # @see https://github.com/ggreer/the_silver_searcher ag
@@ -21,7 +15,6 @@ brew install the_silver_searcher
 # @see https://graphviz.org/doc/info/command.html
 brew install svn
 brew install graphviz
-brew install redis
 
 
 brew install --cask github
