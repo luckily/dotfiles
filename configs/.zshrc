@@ -4,7 +4,6 @@
 source $HOME/.dotfiles/configs/.exports
 source $HOME/.dotfiles/configs/.functions
 
-success '🔱 Load [zsh] successful. 🔱'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/.dotfiles/.homebrew/bin:$HOME/bin:/usr/local/bin:$PATH
@@ -56,6 +55,7 @@ SPACESHIP_PROMPT_ORDER=(
   exit_code     # Exit code section
   char          # Prompt character
 )
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -111,14 +111,20 @@ SPACESHIP_PROMPT_ORDER=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker docker-compose kubectl kops minikube helm aws zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
+
 # zsh-completions
 # @see https://github.com/zsh-users/zsh-completions#oh-my-zsh
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 [[ -e $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 
+
 # Compilation flags. x86_64 for intel and arm64 for apple m1, m2
-# export ARCHFLAGS="-arch x86_64"
-# export ARCHFLAGS="-arch arm64"
+if [[ "$(uname -m)" == "arm64" ]];then
+   export ARCHFLAGS="-arch arm64"
+else
+   export ARCHFLAGS="-arch x86_64"
+fi
+
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -138,9 +144,18 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 [[ -e $HOME/.dotfiles/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.dotfiles/.sdkman/bin/sdkman-init.sh
 
 
+# Run below commands to install pyenv into your shell as a shell function, enable shims and autocompletion.
+# The $PYENV_ROOT environment is in .exports file
+# @see https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
+# export PYENV_ROOT="$HOME/.dotfiles/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+if [[ $(command -v pyenv) ]];then
+   eval "$(pyenv init -)"
+fi
+
+
 # Additional settings
 [[ -e $HOME/.dotfiles/configs/.workrc ]] && source $HOME/.dotfiles/configs/.workrc
 
 
-
-
+success '🔱 Load [zsh] successful. 🔱'

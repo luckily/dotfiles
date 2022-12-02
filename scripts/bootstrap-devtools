@@ -15,21 +15,36 @@ source $HOME/.dotfiles/configs/.zshrc
 info "Start to install zsh-plugins."
 # zsh-completions
 # @see https://github.com/zsh-users/zsh-completions#oh-my-zsh
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+[[ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions ]] && \
+    info "Start to install plugins/zsh-completions" && \
+    git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions && \
+    success "Install plugins/zsh-completions successful."
+
 
 # zsh-autosuggestions
 # @see https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+[[ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]] && \
+    info "Start to install plugins/zsh-autosuggestions" && \
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
+    success "Install plugins/zsh-autosuggestions successful."
+
 
 # zsh-syntax-highlighting
 # @see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+[[ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]] && \
+    info "Start to install plugins/zsh-syntax-highlighting" && \
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting && \
+    success "Install plugins/zsh-syntax-highlighting successful."
+
+
 
 # spaceship theme
 # @see https://spaceship-prompt.sh/getting-started/#installing
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -sf "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-success "Install zsh-plugins successful."
+[[ ! -d "$ZSH_CUSTOM/themes/spaceship-prompt" ]] && \
+    info "Start to install themes/spaceship-prompt" && \
+    git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1 && \
+    ln -sf "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme" && \
+    success "Install themes/spaceship-prompt successful."
 
 
 # Install the version management that manage multiple runtime versions with a single CLI tool
@@ -46,6 +61,20 @@ success "Install zsh-plugins successful."
     info "Start to install sdkman." && \
     curl -s "https://get.sdkman.io" | zsh && \
     success "Install sdkman successful."
+
+
+# Install pyenv for you may need python2.7.x to install some legecy programming langauge versions
+if [[ -z $(command -v pyenv) ]];then
+    if [[ "$(uname -m)" == "arm64" ]];then
+        info "Start to install pyenv(arm64)" && \
+            arch -arm64 brew install pyenv && \
+            success "Install sdkman successful."
+    else
+        info "Start to install pyenv(x86_64)" && \
+            brew install pyenv && \
+            success "Install sdkman successful."
+    fi
+fi
 
 
 # Reload .zshrc
