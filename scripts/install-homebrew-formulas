@@ -4,7 +4,7 @@
 source $HOME/.dotfiles/configs/.zshrc
 
 # Install some dependencies
-brew install gcc openssl readline xz zlib tcl-tk
+brew install gcc openssl readline xz zlib tcl-tk coreutils
 brew install git wget curl tree jq yq tldr ipcalc redis sqlite3 awscli
 
 
