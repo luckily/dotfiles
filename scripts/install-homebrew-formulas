@@ -8,6 +8,13 @@ brew install gcc openssl readline xz zlib tcl-tk coreutils
 brew install git wget curl tree jq yq tldr ipcalc redis sqlite3 awscli
 
 
+# These are dependencies of PHP.
+# @see https://github.com/asdf-community/asdf-php#macos
+# @see https://github.com/asdf-community/asdf-php/blob/248e9c6e2a7824510788f05e8cee848a62200b65/.github/workflows/workflow.yml#L52
+brew install gmp libsodium imagemagick
+brew install autoconf automake bison freetype gd gettext icu4c krb5 libedit libiconv libjpeg libpng libxml2 libzip pkg-config re2c zlib
+
+
 # @see https://github.com/ggreer/the_silver_searcher ag
 brew install the_silver_searcher
 

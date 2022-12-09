@@ -3,6 +3,7 @@ tmp
 .homebrew
 .sdkman
 .pyenv
+.tmp
 configs/.workrc
 
 
