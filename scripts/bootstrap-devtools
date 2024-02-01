@@ -48,11 +48,11 @@ info "Start to install zsh-plugins."
 
 
 # Install the version management that manage multiple runtime versions with a single CLI tool
-# @see https://asdf-vm.com/guide/getting-started.html#_2-download-asdf
-[[ -z $(command -v asdf) ]] && \
-    info "Start to install asdf." && \
-    brew install asdf && \
-    success "Install asdf successful."
+# @see https://mise.jdx.dev/getting-started.html#homebrew
+[[ -z $(command -v mise) ]] && \
+    info "Start to install mise." && \
+    brew install mise && \
+    success "Install mise successful."
 
 
 # Install sdkman(java version management).

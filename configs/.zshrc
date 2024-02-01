@@ -137,8 +137,7 @@ fi
 
 
 # The multiple runtime version management
-[[ -e $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh ]] && source $HOME/.dotfiles/.homebrew/opt/asdf/libexec/asdf.sh
-
+[[ -e $HOME/.dotfiles/.homebrew/bin/mise ]] && eval "$($HOME/.dotfiles/.homebrew/bin/mise activate zsh)"
 
 # The java version management
 [[ -e $HOME/.dotfiles/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.dotfiles/.sdkman/bin/sdkman-init.sh
@@ -157,5 +156,5 @@ fi
 # Additional settings
 [[ -e $HOME/.dotfiles/configs/.workrc ]] && source $HOME/.dotfiles/configs/.workrc
 
-
 success '🔱 Load [zsh] successful. 🔱'
+
