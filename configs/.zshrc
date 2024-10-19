@@ -143,16 +143,6 @@ fi
 [[ -e $HOME/.dotfiles/.sdkman/bin/sdkman-init.sh ]] && source $HOME/.dotfiles/.sdkman/bin/sdkman-init.sh
 
 
-# Run below commands to install pyenv into your shell as a shell function, enable shims and autocompletion.
-# The $PYENV_ROOT environment is in .exports file
-# @see https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
-# export PYENV_ROOT="$HOME/.dotfiles/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-if [[ $(command -v pyenv) ]];then
-   eval "$(pyenv init -)"
-fi
-
-
 # Additional settings
 [[ -e $HOME/.dotfiles/configs/.workrc ]] && source $HOME/.dotfiles/configs/.workrc
 

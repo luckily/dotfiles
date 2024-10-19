@@ -62,21 +62,6 @@ info "Start to install zsh-plugins."
     curl -s "https://get.sdkman.io" | zsh && \
     success "Install sdkman successful."
 
-
-# Install pyenv for you may need python2.7.x to install some legecy programming langauge versions
-if [[ -z $(command -v pyenv) ]];then
-    if [[ "$(uname -m)" == "arm64" ]];then
-        info "Start to install pyenv(arm64)" && \
-            arch -arm64 brew install pyenv && \
-            success "Install sdkman successful."
-    else
-        info "Start to install pyenv(x86_64)" && \
-            brew install pyenv && \
-            success "Install sdkman successful."
-    fi
-fi
-
-
 # Reload .zshrc
 source $HOME/.dotfiles/configs/.zshrc
 
